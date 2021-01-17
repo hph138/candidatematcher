@@ -42,7 +42,11 @@ namespace CandidateMatcher
             {
                 client.BaseAddress = new Uri(uri);
             });
-          
+            services.AddHttpClient<IAppDataService, AppDataService>(client =>
+            {
+                client.BaseAddress = new Uri(uri);
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
