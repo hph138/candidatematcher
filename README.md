@@ -8,3 +8,6 @@ Context menu on jobs and candidates
 Session storage for Blazor
 Services for hitting external apis
 Dependency injection with custom service classes
+
+
+![Alt text](ttps://github.com/hph138/candidatematcher/blob/main/screenshots/home.PNG "Home")
