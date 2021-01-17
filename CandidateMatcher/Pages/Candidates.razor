@@ -1,0 +1,66 @@
+﻿@page "/candidates"
+
+@using CandidateMatcher.Data
+@using CandidateMatcher.Services
+@using Microsoft.Extensions.Configuration
+
+@inject ICandidateService candidateService
+@inject NavigationManager UriHelper
+@inject IConfiguration Configuration
+
+<h1>Candidates</h1>
+
+
+@if (candidates == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <p class="card-text">Right mouse click on  the candidate to select the best matched jobs</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Skills</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var candidate in candidates)
+            {
+                <ContextMenuTrigger WrapperTag="tr" MenuId="tableContextMenu" Data="candidate">
+            <td>@candidate.CandidateId.ToString()</td>
+            <td>@candidate.Name</td>
+            <td>@candidate.SkillTags</td>
+            </ContextMenuTrigger>
+        }
+            </tbody>
+        </table>
+
+        <ContextMenu Id="tableContextMenu">
+            <Item OnClick="@JobClick"> <i class="fas fa-sync-alt blue-icon"></i> Top Jobs</Item>
+        </ContextMenu>
+
+    }
+
+@code {
+    private IEnumerable<Candidate> candidates;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            candidates = await candidateService.GetCandidates();
+            StateHasChanged();
+        }
+    }
+
+    private void JobClick(ItemClickEventArgs e)
+    {
+        Candidate selectedCandidate = (Candidate)e.Data;
+        var topJobs = Configuration.GetSection("TopCandidates").Value;
+        UriHelper.NavigateTo($"/candidatejobs/{selectedCandidate.SkillTags}/{selectedCandidate.Name}/{topJobs}", true);
+    }
+
+}

@@ -1,0 +1,54 @@
+﻿@page "/JobCandidates/{Skills}/{Job}/{Company}/{TopCandidates}"
+
+@using CandidateMatcher.Data
+@using CandidateMatcher.Services
+@inject IJobService jobService
+@inject NavigationManager UriHelper
+
+<h3>Company : @Company</h3>
+<h4>Top @TopCandidates candidates for : @Job</h4>
+<p>Skills Required:  @Skills</p>
+@if (candidates == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Skills</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var candidate in candidates)
+            {
+                <tr>
+                    <td>@candidate.CandidateId.ToString()</td>
+                    <td>@candidate.Name</td>
+                    <td>@candidate.SkillTags</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter] public string Skills { get; set; }
+    [Parameter] public string Job { get; set; }
+    [Parameter] public string TopCandidates { get; set; }
+    [Parameter] public string Company { get; set; }
+
+    private IEnumerable<Candidate> candidates;
+ 
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            candidates = await jobService.GetTopCandidates(Skills, Convert.ToInt32(TopCandidates));
+            StateHasChanged();
+        }
+    }
+}

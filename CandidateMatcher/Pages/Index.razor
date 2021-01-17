@@ -1,0 +1,19 @@
+﻿@page "/"
+
+@inject NavigationManager UriHelper
+
+<h3>Candidate Matching</h3>
+<br />
+<button class="btn btn-primary" @onclick='@(() => Start("jobs"))'>
+    Go to Jobs
+</button>
+<button class="btn btn-primary" @onclick='@(() => Start("candidates"))'>
+    Go to Candidates
+</button>
+@code {
+
+    private void Start(string target)
+    {
+        UriHelper.NavigateTo($"/{target}", true);
+    }
+}
