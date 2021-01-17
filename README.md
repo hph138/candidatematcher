@@ -11,3 +11,8 @@ Dependency injection with custom service classes
 
 
 ![Alt text](https://github.com/hph138/candidatematcher/blob/main/screenshots/home.PNG "Home")
+![Alt text](https://github.com/hph138/candidatematcher/blob/main/screenshots/jobs.PNG "Jobs")
+![Alt text](https://github.com/hph138/candidatematcher/blob/main/screenshots/candidates.PNG "Candidates")
+![Alt text](https://github.com/hph138/candidatematcher/blob/main/screenshots/jobscontextmenu.png "Jobs context menu")
+![Alt text](https://github.com/hph138/candidatematcher/blob/main/screenshots/cancontextmenu.png "Candidates context menu")
+![Alt text](https://github.com/hph138/candidatematcher/blob/main/screenshots/bestmatchcandidate.PNG "Top 10 candidates for job")
