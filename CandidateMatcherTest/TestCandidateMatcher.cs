@@ -8,7 +8,7 @@ namespace CandidateMatcherTest
     public class TestCandidateMatcher
     {
         [Fact]
-        public async  Task GetDataTest()
+        public async  Task API_ResponseOK_Test()
         {
             var client = new TestServerProvider().client;
             var response = await client.GetAsync("https://private-76432-jobadder1.apiary-mock.com/");
