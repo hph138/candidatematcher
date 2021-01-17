@@ -11,19 +11,20 @@ namespace CandidateMatcher.Services
     {
         private readonly HttpClient _httpClient;
         private readonly ISessionStorageService _session;
-
-        public JobService(HttpClient httpClient, ISessionStorageService session)
+        private readonly IAppDataService _appData;
+        public JobService(HttpClient httpClient, ISessionStorageService session, IAppDataService appDataService)
         {
             _httpClient = httpClient;
             _session = session;
+            _appData = appDataService;
         }
        public  async Task<IEnumerable<Job>> GetJobs()
         {
             IEnumerable<Job> jobs = await _session.GetItemAsync<IEnumerable<Job>>("JobsList");
             if (jobs == null)
             {
-               AppDataService appData = new AppDataService(_httpClient,_session);
-                await  appData.InitData();  
+               //AppDataService appData = new AppDataService(_httpClient,_session);
+                await  _appData.InitData();  
                 jobs = await _session.GetItemAsync<IEnumerable<Job>>("JobsList");
             }
             return jobs;
