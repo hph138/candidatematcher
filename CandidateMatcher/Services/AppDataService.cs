@@ -21,7 +21,7 @@ namespace CandidateMatcher.Services
             _session = session;
         }
 
-        public async Task InitData()
+        public async Task<(IEnumerable<Job>, IEnumerable<Candidate>)> InitData()
         {
             IEnumerable<Job> jobs = await _session.GetItemAsync<IEnumerable<Job>>("JobsList");
             if (jobs == null)
@@ -36,7 +36,7 @@ namespace CandidateMatcher.Services
                 candidates = await _httpClient.GetJsonAsync<Candidate[]>("candidates");
                 await _session.SetItemAsync<IEnumerable<Candidate>>("CandidatesList", candidates);
             }
-
+            return (jobs, candidates);
         }
 
     }

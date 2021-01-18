@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hngpgq\\source\\repos\\CandidateMatcher\\CandidateMatcher\\CandidateMatcher.csproj": {}
+    "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcher\\CandidateMatcher.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hngpgq\\source\\repos\\CandidateMatcher\\CandidateMatcher\\CandidateMatcher.csproj": {
+    "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcher\\CandidateMatcher.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hngpgq\\source\\repos\\CandidateMatcher\\CandidateMatcher\\CandidateMatcher.csproj",
+        "projectUniqueName": "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcher\\CandidateMatcher.csproj",
         "projectName": "CandidateMatcher",
-        "projectPath": "C:\\Users\\hngpgq\\source\\repos\\CandidateMatcher\\CandidateMatcher\\CandidateMatcher.csproj",
+        "projectPath": "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcher\\CandidateMatcher.csproj",
         "packagesPath": "C:\\Users\\hngpgq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hngpgq\\source\\repos\\CandidateMatcher\\CandidateMatcher\\obj\\",
+        "outputPath": "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcher\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -44,6 +44,20 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Blazor.ContextMenu": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "Blazored.SessionStorage": {
+              "target": "Package",
+              "version": "[1.0.12, )"
+            },
+            "Microsoft.AspNetCore.Blazor.HttpClient": {
+              "target": "Package",
+              "version": "[3.2.0-preview3.20168.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

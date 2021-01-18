@@ -24,8 +24,10 @@ namespace CandidateMatcher.Services
             if (jobs == null)
             {
                //AppDataService appData = new AppDataService(_httpClient,_session);
-                await  _appData.InitData();  
-                jobs = await _session.GetItemAsync<IEnumerable<Job>>("JobsList");
+                var result = await  _appData.InitData();
+                jobs = result.Item1;
+               // jobs = await _session.GetItemAsync<IEnumerable<Job>>("JobsList");
+
             }
             return jobs;
         }

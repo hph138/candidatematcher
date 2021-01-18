@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hngpgq\\Downloads\\candidatematcher-main\\candidatematcher-main\\CandidateMatcherTest\\CandidateMatcherTest.csproj": {}
+    "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcherTest\\CandidateMatcherTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hngpgq\\Downloads\\candidatematcher-main\\candidatematcher-main\\CandidateMatcherTest\\CandidateMatcherTest.csproj": {
+    "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcherTest\\CandidateMatcherTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hngpgq\\Downloads\\candidatematcher-main\\candidatematcher-main\\CandidateMatcherTest\\CandidateMatcherTest.csproj",
+        "projectUniqueName": "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcherTest\\CandidateMatcherTest.csproj",
         "projectName": "CandidateMatcherTest",
-        "projectPath": "C:\\Users\\hngpgq\\Downloads\\candidatematcher-main\\candidatematcher-main\\CandidateMatcherTest\\CandidateMatcherTest.csproj",
+        "projectPath": "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcherTest\\CandidateMatcherTest.csproj",
         "packagesPath": "C:\\Users\\hngpgq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hngpgq\\Downloads\\candidatematcher-main\\candidatematcher-main\\CandidateMatcherTest\\obj\\",
+        "outputPath": "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcherTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -33,8 +33,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\hngpgq\\Downloads\\candidatematcher-main\\candidatematcher-main\\CandidateMatcher\\CandidateMatcher.csproj": {
-                "projectPath": "C:\\Users\\hngpgq\\Downloads\\candidatematcher-main\\candidatematcher-main\\CandidateMatcher\\CandidateMatcher.csproj"
+              "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcher\\CandidateMatcher.csproj": {
+                "projectPath": "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcher\\CandidateMatcher.csproj"
               }
             }
           }
@@ -56,6 +56,10 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.7.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.0, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -96,14 +100,14 @@
         }
       }
     },
-    "C:\\Users\\hngpgq\\Downloads\\candidatematcher-main\\candidatematcher-main\\CandidateMatcher\\CandidateMatcher.csproj": {
+    "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcher\\CandidateMatcher.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hngpgq\\Downloads\\candidatematcher-main\\candidatematcher-main\\CandidateMatcher\\CandidateMatcher.csproj",
+        "projectUniqueName": "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcher\\CandidateMatcher.csproj",
         "projectName": "CandidateMatcher",
-        "projectPath": "C:\\Users\\hngpgq\\Downloads\\candidatematcher-main\\candidatematcher-main\\CandidateMatcher\\CandidateMatcher.csproj",
+        "projectPath": "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcher\\CandidateMatcher.csproj",
         "packagesPath": "C:\\Users\\hngpgq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hngpgq\\Downloads\\candidatematcher-main\\candidatematcher-main\\CandidateMatcher\\obj\\",
+        "outputPath": "C:\\Users\\hngpgq\\Documents\\GitHub\\candidatematcher\\CandidateMatcher\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -148,10 +152,6 @@
             "Microsoft.AspNetCore.Blazor.HttpClient": {
               "target": "Package",
               "version": "[3.2.0-preview3.20168.3, )"
-            },
-            "Microsoft.AspNetCore.TestHost": {
-              "target": "Package",
-              "version": "[3.1.11, )"
             }
           },
           "imports": [

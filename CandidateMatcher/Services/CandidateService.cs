@@ -13,7 +13,7 @@ namespace CandidateMatcher.Services
         private readonly HttpClient _httpClient;
         private readonly ISessionStorageService _session;
         private readonly IAppDataService _appData;
-        public CandidateService(HttpClient httpClient,ISessionStorageService session, IAppDataService appDataService)
+        public CandidateService(HttpClient httpClient, ISessionStorageService session,IAppDataService appDataService)
         {
             _httpClient = httpClient;
             _session = session;
@@ -26,8 +26,8 @@ namespace CandidateMatcher.Services
             if (candidates == null)
             {
                 //AppDataService appData = new AppDataService(_httpClient, _session);
-                await _appData.InitData();
-                candidates = await _session.GetItemAsync<IEnumerable<Candidate>>("CandidatesList");
+                var result = await _appData.InitData();
+                candidates = result.Item2;
             }
             return candidates;
         }
